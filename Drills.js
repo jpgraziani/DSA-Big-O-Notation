@@ -126,10 +126,61 @@ function efficientSearch(array, item) {
     }
     return -1;
 }
-Random element O(1) - even though an array is inputted, it's runtime complexity is constant because it's independent of the input (no looping is happening).
+An Efficent search O(log(n)) when the input significantly increases, the output does not. It does not check every element to succeed.
 
 It is also charactersic of logarithmic alogrithms that they cut teh problem size in half each round though
+===============================================
+===============================================
+#9 Random element
+  function findRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
 
-The Big O here is (O(log(n)) because the array though sorted, is the same array.
+  Random element O(1) - even though an array is inputted, it's runtime complexity is constant because it's independent of the input (no looping is happening).
+===============================================
+===============================================
+#10 What am I?
+  function isWhat(n) {
+    if (n < 2 || n % 1 !== 0) {
+        return false;
+    }
+    for (let i = 2; i < n; ++i) {
+        if (n % i === 0) return false;
+    }
+    return true;
+  }
+What Am I? This function calculates if the input is a prime number (returns true if it is). The Big O is O(n) (sublinear); the time is dependent on the input but not in a strictly linear way (if it's a whole number greater than 1, it is constant, but if it's a prime number it's calculated n times).
 
+Note Prime num:To prove whether a number is a prime number, first try dividing it by 2, and see if you get a whole number. If you do, it can't be a prime number. If you don't get a whole number, next try dividing it by prime numbers: 3, 5, 7, 11 (9 is divisible by 3) and so on, always dividing by a prime number (see table below).
+===============================================
+===============================================
+#11 Tower of Hanoi
+TOH See code for details If you are given 5 disks, how do the rods look like after 7 recursive calls? Rod A: 1, 2, 3, 4 Rod B: none Rod C: 5, 6, 7 A -> C A -> B C -> B A -> C B -> A B -> C A -> C How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks? 3 disks: 7 moves 4 disks: 15 moves 5 disks: 31 moves What is the runtime of your algorithm? O(n^2)
+===============================================
+===============================================
+#12 code-drills.js
+
+===============================================
+===============================================
+13. Recursive Big O
+    Using solution code from recursive functions: 
+    * Count Sheep: O(n)
+    * Power Calculator: O(n)
+    * Reverse String: O(n)
+    * Triangle: O(n)
+    * Split: O(n) (mostly linear)
+    * Factorial: O(n)
+    * Fibonacci: O(n)
+===============================================
+===============================================
+14. Iterative Big O
+    * Count Sheep: O(n)
+    * Power Calculator: O(n)
+    * Reverse String: O(n)
+    * Triangle: O(n)
+    * Split: O(n)
+    * Factorial: O(n)
+    * Fibonacci: O(n)
+===============================================
+===============================================  
 */
