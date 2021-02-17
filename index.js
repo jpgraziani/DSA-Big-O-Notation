@@ -246,9 +246,9 @@ function countTriangle(layers) {
   };
 }
 
-countTriangle(2);
-countTriangle(4);
-countTriangle(16);
+console.log(countTriangle(2));
+console.log(countTriangle(4));
+console.log(countTriangle(16));
 
 /*
 Running the code, you'll see performance for inputs of size 2, 4, and 16. While there are only 6 ticks with input size 2, at input size 16, we're at 65552 ticks!
